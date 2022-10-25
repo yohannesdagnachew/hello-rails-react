@@ -8,11 +8,7 @@ import Greeting from "./Greeting";
 const App = () => {
   return (
     <Provider store={store}>
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<Greeting />} />
-        </Routes>
-      </Router>
+       <Greeting/>
     </Provider>
   );
 };
