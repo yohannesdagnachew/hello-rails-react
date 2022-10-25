@@ -1,24 +1,51 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Set up a "Hello world" project as one app with Webpack
 
-Things you may want to cover:
+> Implement a connection between a Ruby on Rails back-end and React front-end.
 
-* Ruby version
+## Built With
 
-* System dependencies
+- **Ruby**
+- **Rails**
+- **Postgresql**
+- **React**
+- **Redux**
 
-* Configuration
+## Getting Started
 
-* Database creation
+To get a local copy up and running follow these simple example steps.
 
-* Database initialization
+## Prerequisites
 
-* How to run the test suite
+- You need Ruby v3+, Rails v7+ and Postgresql installed on your machine.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Setup
 
-* Deployment instructions
+- Clone the project `https://github.com/yohannesdagnachew/hello-rails-react.git`
+- navigate to the folder `cd hello-rails-react`
+- Install required gems `bundle i`
 
-* ...
+## Usage
+
+- start the server `rails s`
+
+- Enjoy interacting with the app.
+
+## Author
+
+👤 **Yohannes Dagnachew**
+
+- GitHub: [@Yohannes](https://github.com/yohannesdagnachew/hello-rails-react)
+- LinkedIn: [Yohannes Dagnachew](https://www.linkedin.com/in/yohannesdagnachew/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/yohannesdagnachew/hello-rails-react/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
