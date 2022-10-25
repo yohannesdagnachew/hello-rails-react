@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import store from "../redux/store";
-import Greeting from "./Greeting";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Greeting from "./greetings";
+import { useDispatch } from "react-redux";
+import { fetchMessage } from "../redux/reducer";
 
 const App = () => {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => dispatch(fetchMessage()), []);
+
   return (
-    <Provider store={store}>
-       <Greeting/>
-    </Provider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Greeting />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
-
 export default App;

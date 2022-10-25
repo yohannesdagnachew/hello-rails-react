@@ -1,23 +1,23 @@
-import axios from "axios";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-const GET_MESSAGE = "greetings/message";
+const messagesAPI = "http://localhost:3000/api/messages";
+const initialState = [];
 
-const getMessage = (message) => ({ type: GET_MESSAGE, payload: message });
-
-function greetReducer(state = [], action = {}) {
-  switch (action.type) {
-    case GET_MESSAGE:
-      return action.payload;
-    default:
-      return state;
+export const fetchMessage = createAsyncThunk(
+  "messages/getMessage",
+  async () => {
+    const res = await fetch(messagesAPI);
+    const data = await res.json();
+    return data;
   }
-}
+);
 
-const fetchMessage = async () => {
-  await axios.get("api/message").then((response) => {
-    return response.data.greeting;
-  });
-};
+const messagesSlice = createSlice({
+  name: "messages",
+  initialState,
+  extraReducers: {
+    [fetchMessage.fulfilled]: (state, action) => action.payload,
+  },
+});
 
-export { getMessage, fetchMessage };
-export default greetReducer;
+export default messagesSlice.reducer;
